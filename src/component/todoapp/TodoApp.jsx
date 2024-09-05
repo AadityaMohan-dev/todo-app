@@ -63,16 +63,19 @@ function TodoApp() {
       <ToastContainer />
       <div id="main-todo-container" className="h-full w-full px-10 py-2">
         <div id="head" className="py-5  uppercase"><span className="font-semibold text-xl">Task Manager</span></div>
-        <div id="add-task" className="flex justify-between flex-wrap md:flex-nowrap ">
+        <div id="add-task" className="md:flex md:justify-between">
           <input
             type="text"
             value={task}
             onChange={handleChange}
             className="mt-1 block w-full max-w-md px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
           />
+          <div id="btn" className="md:flex md:justify-between grid gap-2 mt-2 md:mt-0 ">
           <button onClick={onAddTask} className="uppercase bg-blue-400 text-white px-2 py-1 md:px-4 md:py-2 rounded">Add TASK</button>
           <button onClick={handleDeleteAll} className="uppercase bg-red-400 text-white px-2 py-1 md:px-4 md:py-2 rounded">Delete All Tasks</button>
-        </div>
+        
+          </div>
+          </div>
         <div id="list-container" className="mt-10">
         <ol className="h-64 md:h-80 overflow-y-auto">
             {items.map((item, index) => (
