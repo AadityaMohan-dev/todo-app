@@ -3,6 +3,7 @@ import "./App.css";
 import StopWatch from "./component/stopwatch/StopWatch";
 import TodoApp from "./component/todoapp/TodoApp";
 import Quotes from "./component/weather-app/Quotes";
+import bg from "./assets/background.avif"
 
 function App() {
   const[date, setDate] = useState(new Date())
@@ -36,7 +37,8 @@ const formatTime = (time) => {
     
       <div
         id="main-app-container"
-        className="h-screen w-screen  bg-[url('https://img.freepik.com/free-vector/hand-painted-watercolor-abstract-watercolor-background_23-2149018550.jpg?t=st=1725475997~exp=1725479597~hmac=9ca3a0f3e9fb2b61fb9e9a5d796f6d7bd18017e58ccdabefc454e9d01acaaed1&w=740')] bg-cover bg-center"
+        className="h-full w-screen bg-cover bg-center"
+        style={{ backgroundImage: `url(${bg})` }}
       >
         <div id="time-date" className='flex justify-between px-10 py-5'>
             <div id="date" className=' font-semibold font-sans text-lg'>{formatDate(date)}</div>
